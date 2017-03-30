@@ -6,15 +6,12 @@ areas.
 
 ## Problem / Question
 
-Applications are ultimately just tools. What problem or question does
-your application attempt to resolve or grapple with? How does your
-application speak to this problem/question?
+In this project, I aims to map out Philadelphia crash point. This map will conclude
+information such as crash point, crash type, crash time and causes. Users are able to
+type in their stating location and destination. The safest route will be created.
 
 ## The data
-
-Geospatial applications are all about working with data. What datasets
-would you plan/like to use? If the data you'll be working with isn't
-already stored in a way that you can use, how will you be storing your data?
+Data are available on OpenDataPhilly
 
 ## Technologies used
 
@@ -25,14 +22,19 @@ Review the APIs/online examples of leaflet, turf, jQuery, underscore (or
 any library not explicitly covered in class) for functions/uses which
 you'd like to explore. Briefly describe how you might use them.
 
+The most of technologies would be covered in this project.
+
 ## Design spec
 
 #### User experience
 
 At a high level, how do you expect people to use your application?
 - Who are the users?
+  People who are care about the safety will be the users.
 - What do they gain from your application' use?
+  They are able to get the safest route.
 - Are there any website/application examples in the wild to which you can compare your final?
+  The Vision Zero View (http://www.nycvzv.info/)
 
 #### Layouts and visual design
 
@@ -44,6 +46,10 @@ these as well as a number not mentioned. Try to describe your
 application's visual layout. Conceptually (no need for extensive CSS
 here), what will this design require?
 
+A sidebar will show the crash information such as crash point, crash type, crash time and causes.
+At each point, there will a popup. And there will be a selection tool for uses to select stating
+location and destination.
+
 ## Anticipated difficulties
 
 Thinking about weaknesses can be useful. What do you anticipate being
@@ -52,6 +58,8 @@ these difficulties? For example, asynchronous behavior (ajax, events)
 are hard to use and think about. Global variables are a strategy for
 coping with that difficulty by breaking data out of the asynchronous
 context.
+
+The most difficult part may be to create the safest route basing on crash data.
 
 ## Missing pieces
 

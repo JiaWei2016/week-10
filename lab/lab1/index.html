@@ -7,24 +7,135 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/leaflet.css" />
     <!-- Choose a frontend framework CSS file: -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <!-- <link rel="stylesheet" href="css/material.css" /> -->
     <!-- <link rel="stylesheet" href="css/assembly.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <!-- Optional theme -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   </head>
   <body>
+
+
     <!-- Sidebar -->
     <div class="sidebar">
       <nav class="navbar navbar-default">
         <div class="container-fluid clearfix">
           <div class="topright-button" style="float: right">
-            [Add New]
+            <div class="dropdown">
+               <button id="dropdownbutton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="icons" role="presentation">Add New</i>
+                 <span class="caret"></span>
+               </button>
+              <ul class="dropdown-menu" aria-labelledby="dLabel">
+                <li class="dropdown-menu__item">view history</li>
+                <li class="dropdown-menu__item">Email All Manufacturers</li>
+            </ul>
           </div>
           <div class="navbar-header">
             <a href="#">Manufacturers</a>
           </div>
+          <div class="row">
+           <!-- /input-group -->
+             <!-- /.col-lg-6 -->
+             <div class="col-lg-6">
+               <div class="input-group">
+                 <input type="text" class="form-control" placeholder="Search for...">
+                 <span class="input-group-btn">
+                   <button class="btn btn-default" type="button">
+                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                   </button>
+                 </span>
+               </div><!-- /input-group -->
+             </div><!-- /.col-lg-6 -->
+           </div><!-- /.row -->
         </div>
+
+      <!-- Button trigger modal -->
+      <button type="button" id="leftbutton" data-toggle="modal" data-target="#myModal">
+       Manufacturers
+      </button>
+      <!--  modal-->
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Manufacturer</h4>
+                </div>
+                <div class="modal-body">
+                    <h5 id="rectangle1"> This manufacturer has low inventor</h5>
+                  <div class="modal-body-2">
+                    <h3> Tandy's Basketweavers </h3>
+                    <div class="btn-group" role="group" aria-label="..." style = "float: right">
+                   <button type="button" class="btn btn-default">Edit</button>
+                   <button type="button" class="btn btn-default">Delete</button>
+                   <button type="button" class="btn btn-default">Export</button>
+                 </div>
+                    <div class="modal-body">
+                    <div class="row2">
+                      <div class="col-md-3">
+                        <h5><b>Address</b></h5>
+                        <div>490 Freedom Drive<br>
+                        Philadelphia, PA 19425</div>
+                      </div>
+                      <div class="col-md-3">
+                        <h5><b>Contact</b></h5>
+                        <div>Dave Javeris<br>
+                        Senior Weaver<br>
+                        dj@tbw.com</div>
+                      </div>
+                      <div class="col-md-5" style = "text-align:center">
+                        <h1 class="text-primary" style =  "font-size: 60px;">324</h1>
+                        <div>Baskets sold in past 7 days</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-body">
+                    <label for="exampleInputPassword1">Sales</label>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Purchase</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>Mark</td>
+                         <td>Otto</td>
+                         <td>Fruit Basket</td>
+                       </tr>
+                       <tr>
+                         <td>Jacob</td>
+                         <td>Thornton</td>
+                         <td>Gift Basket</td>
+                       </tr>
+                       <tr>
+                         <td>Larry</td>
+                         <td>the Bird</td>
+                         <td>Easter Basket</td>
+                       </tr>
+                     </tbody>
+                   </table>
+                 </div>
+               </div><!-- /.modal-content -->
+             </div><!-- /.modal-dialog -->
+           </div><!-- /.modal -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
       </nav>
+
+
       <div class="item">
         <h2 class="item-heading">Tandy’s Basketweavers</h2>
         <div>490 Freedom Drive<br>
@@ -50,6 +161,8 @@
         <div>2542 Walnut Street<br>
         Philadelphia, PA 19107</div>
       </div>
+
+
       <div class="sort">
         Sort by <span class="sort-option selected">A–Z</span> <span class="sort-option">Inventory</span>
       </div>
@@ -60,7 +173,7 @@
     <script src="js/jquery-2.2.0.js"></script>
     <script src="js/leaflet.js"></script>
     <!-- Choose a frontend framework Javascript file: -->
-    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/bootstrap.js"></script>
     <!-- <script src="js/material.js"></script> -->
     <!-- <script src="js/assembly.js"></script>  -->
     <script src="js/setup.js"></script>
